@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 class TeamRanking extends Component {
     render() {
         return (
-            <div>
-                <p>TeamRanking</p>
+            <div className="appcontainer">
+                <h2>TeamRanking</h2>
             </div>
         );
     }
