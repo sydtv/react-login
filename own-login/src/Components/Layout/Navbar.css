@@ -1,0 +1,22 @@
+.Navbar {
+    width: 300px;
+    position: fixed;
+    height: 100vh;
+    background-color: #282c34;
+    text-align: left;
+}
+
+.Navbar nav ul li:hover,
+.Navbar nav ul li.active {
+    background-color: #1c2028;
+}
+
+.Navbar nav ul li a{
+    padding: 20px 0 20px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    width: calc(100% - 30px);
+    display: inline-block;
+}
+
