@@ -10,7 +10,7 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <div className="App">
-                    <Route path={['/home', '/friends', '/ranking', '/createteam', '/teamranking', '/account']} component={Navbar} />
+                    <Route path={['/home', '/friends', '/ranking', '/createteam', '/teamranking', '/account']} exact component={Navbar} />
                     <div>
                         <Routes/>
                     </div>
