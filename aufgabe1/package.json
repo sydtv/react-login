@@ -1,12 +1,11 @@
 {
-  "name": "react-udemy",
+  "name": "aufgabe1",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "radium": "^0.25.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-scripts": "2.0.5"
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
