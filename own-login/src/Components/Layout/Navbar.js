@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import { NavLink } from 'react-router-dom';
 
 import './Navbar.css';
 
-class Navbar extends Component {
+class Navbar extends PureComponent {
     componentDidMount() {
         document.querySelector('a.active').parentElement.classList.add('active');
     }

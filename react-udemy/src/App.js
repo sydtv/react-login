@@ -1,8 +1,22 @@
 import React, {Component} from 'react';
-import './App.css';
-import Person from './Person/Person';
+import classes from './App.css';
+import Cockpit from './Components/Cockpit/Cockpit'
+import Persons from './Components/Persons/Persons';
 
 class App extends Component {
+
+    constructor(props) {
+        super(props);
+        console.log('[App.js] Inside Constructor')
+    }
+
+    componentWillMount(){
+        console.log('[App.js] Inside componentWillMount')
+    }
+
+    componentDidMount() {
+        console.log('[App.js] Inside componentDidMount')
+    }
 
     state = {
         persons: [
@@ -59,35 +73,32 @@ class App extends Component {
     };
 
     render() {
+        console.log('[App.js] Inside Render');
 
         let persons = null;
         if (this.state.showPersons) {
             persons = (
-                <div>
-                    {this.state.persons.map((person, index) => {
-                        return (
-                            <Person
-                                name={person.name}
-                                age={person.age}
-                                changed={(event) => this.nameChangedHandler(event, person.id)}
-                                delme={() => this.deleteNameHandler(index)}
-                                key={person.id}/>
-                        )
-                    })}
-                </div>
+                    <Persons
+                    persons={this.state.persons}
+                    clicked={this.deleteNameHandler}
+                    changed={this.nameChangedHandler}/>
             );
         }
 
         return (
 
-            <div className="App">
-                <h1>Hello</h1>
-                <button onClick={this.togglePersonsHandler}>Switch Name</button>
+            <div className={classes.App}>
+                <Cockpit
+                    click={this.togglePersonsHandler}
+                    otherState={this.state.otherState}
+                />
                 {persons}
-                <p>{this.state.otherState}</p>
             </div>
         );
     }
+
+
+
 }
 
 export default App;
