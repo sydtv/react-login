@@ -1,0 +1,36 @@
+@import "variables";
+
+.BigTask {
+  &--task {
+    width: calc(100% - 20px);
+    padding: 10px;
+    background: $bigTaskColor;
+    input {
+      background: transparent;
+      border: none;
+      color: $bigTaskFontColor;
+      font-size: 18px;
+      &:focus,
+      &:active {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+  &--undertask {
+    background-color: $bigTaskUnderColor;
+    padding: 10px 0 0 0;
+  }
+  .BigPlus {
+    &--button {
+      &_img {
+        fill: $bigTaskColor;
+        width: 45px;
+        padding: 10px;
+        margin-left: calc(50% - 22.5px);
+        margin-top: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
